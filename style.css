@@ -1,13 +1,16 @@
 body{
-    font-family:Helvetica,Arial,sans-serif;
-    padding:40px;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-display: swap;
+    padding:100px;
     display:grid;
-    gap:40px;
+    gap:75px;
+    margin: 0;
 }
 
 img{
     width:100%;
     height:auto;
+    vertical-align: top;
 }
 
 a{
@@ -27,15 +30,23 @@ p, h1{
 }
 
 .header{
-    display:grid;
-    grid-template-columns: 1fr 1fr;
+    display:flex;
+    flex-direction: column;
+    gap: 50px;
     align-items:center;
+    justify-content: center;
+}
+
+.logo {
+    width: 128px;
+    height: 95px;
 }
 
 .menu{
     display:flex;
-    gap:20px;
+    gap: 100px;
     justify-content: flex-end;
+    font-size: 20px;
 }
  .menu a:hover{
     text-decoration: underline;
@@ -48,10 +59,24 @@ p, h1{
 .works {
     display:grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap:40px;
+    gap:75px 100px;
 }
+
+@media screen and (max-width: 1280px) {
+    .works{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .works{
+        grid-template-columns: 1fr 1fr ;
+    }
+}
+
 .works-item {
-    display:grid;
+    display:flex;
+    flex-direction: column;
     gap:10px;
 }
 
@@ -67,9 +92,10 @@ p, h1{
 .works-item-title {
     margin:0;
     font-size:16px;
+    font-weight: normal;
     line-height: 24px;
 }
-.works-item-date{
+.works-item-discription{
     font-size:12px;
     line-height: 16px;
 }
@@ -93,10 +119,25 @@ p, h1{
     gap:64px;
     padding:24px 0;
 }
+
+.detail-body{
+    display:grid;
+    grid-template-columns: 1fr;
+    gap:64px
+}
+
 .detail-sub-images{
     display:grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr ;
     gap:64px;
+}
+.about{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap:50px;
+}
+.name{
+    font-size:25px;
 }
 
 @media screen and (max-width:720px) {
@@ -108,8 +149,8 @@ p, h1{
         grid-template-columns: 1fr;
     }
     body{
-        padding:20px;
-        gap:20px;
+        padding:50px 25px;
+        gap:50px;
     }
     .detail-title{
         font-size:32px;
