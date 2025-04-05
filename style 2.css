@@ -1,0 +1,157 @@
+body{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-display: swap;
+    padding:100px;
+    display:grid;
+    gap:75px;
+    margin: 0;
+}
+
+img{
+    width:100%;
+    height:auto;
+    vertical-align: top;
+}
+
+a{
+    color:black;
+    text-decoration: none;
+}
+
+p, h1{
+    margin:0;
+}
+
+.header-title{
+    margin: 0;
+    font-size: 32px;
+    line-height: 48px;
+    font-weight: normal;
+}
+
+.header{
+    display:flex;
+    flex-direction: column;
+    gap: 50px;
+    align-items:center;
+    justify-content: center;
+}
+
+.logo {
+    width: 128px;
+    height: 95px;
+}
+
+.menu{
+    display:flex;
+    gap: 100px;
+    justify-content: flex-end;
+    font-size: 20px;
+}
+ .menu a:hover{
+    text-decoration: underline;
+ }
+
+.footer{
+    display:flex;
+    justify-content: flex-end;
+}
+.works {
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap:75px 100px;
+}
+
+@media screen and (max-width: 1280px) {
+    .works{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .works{
+        grid-template-columns: 1fr 1fr ;
+    }
+}
+
+.works-item {
+    display:flex;
+    flex-direction: column;
+    gap:10px;
+}
+
+.works-item:hover .works-item-title{
+    text-decoration: underline;
+}
+.works-item-image{
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    width:100%;
+    height:auto;
+}
+.works-item-title {
+    margin:0;
+    font-size:16px;
+    font-weight: normal;
+    line-height: 24px;
+}
+.works-item-discription{
+    font-size:12px;
+    line-height: 16px;
+}
+.footer{
+    display:flex;
+    justify-content: flex-end;
+}
+
+.detail-header{
+    display:grid;
+    gap:24px;
+    max-width: 720px;
+}
+
+.detail-title{
+    font-size:48px;
+}
+
+.detail{
+    display:grid;
+    gap:64px;
+    padding:24px 0;
+}
+.detail-sub-images{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap:64px;
+}
+.about{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap:50px;
+}
+.name{
+    font-size:25px;
+}
+
+@media screen and (max-width:720px) {
+    .header-title{
+        font-size:24px;
+        line-height: 32px;
+    }
+    .works{
+        grid-template-columns: 1fr;
+    }
+    body{
+        padding:50px 25px;
+        gap:50px;
+    }
+    .detail-title{
+        font-size:32px;
+    }
+    .detail-sub-images{
+        display:grid;
+        grid-template-columns: 1fr;
+        gap:24px;
+
+    }
+}
